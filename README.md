@@ -1,20 +1,20 @@
 # Yazi Config
 
-Minimale Yazi-Konfiguration mit Rose-Pine und ein paar Plugins.
+Minimal Yazi config with Rose-Pine and a few plugins.
 
 ![Yazi Preview](preview/acats.png)
 
-## Plugins installieren
+## Install Plugins
 
 ```bash
-# Offizielle Plugins
+# Official plugins
 ya pkg add yazi-rs/plugins:git
 ya pkg add yazi-rs/plugins:piper
 ya pkg add yazi-rs/plugins:smart-enter
 ya pkg add yazi-rs/plugins:toggle-pane
 ya pkg add yazi-rs/plugins:chmod
 
-# Community-Plugins
+# Community plugins
 ya pkg add ndtoan96/ouch
 ya pkg add kastrbl4nik/kra
 ya pkg add macydnah/office
@@ -25,9 +25,9 @@ ya pkg add DreamMaoMao/fg
 ya pkg add Mintass/rose-pine
 ```
 
-`zoxide` und `magick` sind bereits in Yazi eingebaut und müssen nicht separat installiert werden.
+`zoxide` and `magick` are built into Yazi, so no separate install is needed.
 
-`video-timeline` gibt es nicht über `ya pkg`, daher manuell:
+`video-timeline` is not available via `ya pkg`, so install it manually:
 
 ```bash
 git clone https://github.com/nbaud/yazi-video-timeline.git /tmp/yazi-video-timeline
@@ -35,19 +35,19 @@ cp -r /tmp/yazi-video-timeline/video-timeline.yazi ~/.config/yazi/plugins/
 chmod +x ~/.config/yazi/plugins/video-timeline.yazi/preview.sh
 ```
 
-## Tasten
+## Keybindings
 
-| Taste | Aktion |
+| Key | Action |
 |---|---|
-| `T` | Vorschau maximieren / wiederherstellen |
-| `M` | Vorschau ein- / ausblenden |
-| `l` | Ordner öffnen oder Datei öffnen |
-| `F` | Dateisuche nach Inhalt (`rg` über `fg`) |
-| `z` | Verzeichnis über `zoxide` wählen |
-| `e` | Archiv entpacken |
-| `C` | Komprimieren mit `ouch` |
-| `Ctrl+d` | Drag and Drop |
-| `A` | Neuen Ordner erstellen |
-| `w`, dann `x` | Task-Manager öffnen / Task abbrechen |
+| `T` | Maximize / restore preview |
+| `M` | Show / hide preview |
+| `l` | Enter directory or open file |
+| `F` | Search file contents (`rg` via `fg`) |
+| `z` | Jump with `zoxide` |
+| `e` | Extract archive |
+| `C` | Compress with `ouch` |
+| `Ctrl+d` | Drag and drop |
+| `A` | Create new directory |
+| `w`, then `x` | Open task manager / cancel task |
 
-> Hinweis: `M` ist in `keymap.toml` zusätzlich mit `chmod` belegt.
+> Note: `M` is also bound to `chmod` in `keymap.toml`.
